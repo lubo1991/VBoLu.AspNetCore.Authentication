@@ -1,6 +1,6 @@
 # VBoLu.AspNetCore.Authentication
 基于identityServer4三方登录
-#调用方式
+# 调用方式
   services.AddAuthentication()
                   .AddDingDing("DingDing", o =>
                   {
