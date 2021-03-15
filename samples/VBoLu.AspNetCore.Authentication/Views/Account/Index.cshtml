@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>三方登录示例</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" media="screen" />
+
+    <link rel="stylesheet" href="~/css/site.css">
+
+
+
+</head>
+<body>
+
+    <div class="text-center">
+        <h1 class="display-4">三方登录示例</h1>
+        <p>
+            <a href="@Url.Action("ExternalLogin","Account",new { provider = "DingDing" })" >
+                钉钉登录
+            </a>
+        </p>
+    </div>
+</body>
+</html>
