@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RepositoryUrl>https://github.com/lubo1991/VBoLu.AspNetCore.Authentication.git</RepositoryUrl>
+    <Authors>VBoLu</Authors>
+    <Description>适用于ASP.NET Core3.1+ 的 OAuth2 认证中间件，使Web应用程序支持用钉钉快捷登录。</Description>
+    <PackageProjectUrl>https://github.com/lubo1991/VBoLu.AspNetCore.Authentication.git</PackageProjectUrl>
   </PropertyGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
