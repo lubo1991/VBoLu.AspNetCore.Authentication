@@ -34,10 +34,10 @@ namespace VBoLu.AspNetCore.Authentication
               
                   .AddDingDing("DingDing", o =>
                   {
-                      o.ClientId = "ding6rku8jlqdqclnsdy";//获取token的应用(可以不用，但不能为空)
-                      o.ClientSecret = "L8di4G-gKlp_m9XGbHf3SPPEIJnAftu5ljzPC0KQgUQrVf2sQR5pZ7BIvt-FewoP";//获取token的秘钥(可以不用，但不能为空)
-                      o.AppID = "dingoagfp8ydmgozdlf3zi";//登录的应用
-                      o.AppSecret = "MmEvkhvMx35PXeNQZfD7qujwCNdh6w31Sjn6ZJdjvdfzFXQwvAdlaasDAw0whY-i";//登录获取用户信息秘钥
+                      o.ClientId = "";//获取token的应用(可以不用，但不能为空)
+                      o.ClientSecret = "";//获取token的秘钥(可以不用，但不能为空)
+                      o.AppID = "";//登录的应用
+                      o.AppSecret = "";//登录获取用户信息秘钥
                                                                                                        //IdentityServer4 需要使用
                       o.ClaimActions.MapJsonKey(JwtClaimTypes.Subject, "unionid");//将Unionid映射到Subject
                                                                                    //o.ClaimActions.MapJsonKey(JwtClaimTypes.PhoneNumber, "mobile");//企业内部员工才能获取
