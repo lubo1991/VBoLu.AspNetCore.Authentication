@@ -39,17 +39,22 @@ namespace VBoLu.AspNetCore.Authentication.Controllers
         {
             if (string.IsNullOrEmpty(provider)) return BadRequest();
 
-            var authenticateResult = await HttpContext.AuthenticateAsync(provider);
+            var result = await HttpContext.AuthenticateAsync(provider);
 
-            if (!authenticateResult.Succeeded)
+            if (!result.Succeeded)
             {
                 return Content("登录失败");
             }
+            if (_logger.IsEnabled(LogLevel.Debug))
+            {
+                var externalClaims = result.Principal.Claims.Select(c => $"{c.Type}: {c.Value}");
+                _logger.LogDebug("External claims: {@claims}", externalClaims);
+            }
+            string unionid = result.Principal.FindFirstValue(ClaimTypes.NameIdentifier);
+            string name = result.Principal.FindFirstValue(ClaimTypes.Name);
 
-            string name = authenticateResult.Principal.FindFirstValue(ClaimTypes.NameIdentifier);
 
-
-            return Content(name);
+            return Content($"name:{name},unionid:{unionid}");
         }
     }
 }
