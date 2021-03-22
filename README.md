@@ -1,7 +1,8 @@
 # VBoLu.AspNetCore.Authentication
 基于identityServer4三方登录
 # 调用方式
-  services.AddAuthentication()
+ 
+           services.AddAuthentication()
                   .AddDingDing("DingDing", o =>
                   {
                        // var dingding = Configuration.GetSection("dingDingAuthority").Get<DingDingAuthenticationOptions>();
